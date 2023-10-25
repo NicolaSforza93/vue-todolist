@@ -8,7 +8,19 @@
 </head>
 <body>
     <div id="app">
-        
+        <div class="container">
+            <div>
+                <input type="text">
+                <button>Aggiungi</button>
+            </div>
+           
+            <div class="tasks">
+                <ul>
+                    <li v-for="(item, index, key) in todos" :class="{done: item.done}">{{ item.text }}</li>
+                </ul>
+                <p>Non ci sono tasks</p>
+            </div>
+        </div>
     </div>    
 
 
