@@ -13,8 +13,8 @@
     <div id="app">
         <div class="container">
             <div>
-                <input type="text">
-                <button>Aggiungi</button>
+                <input type="text" v-model="newTodo">
+                <button @click="addTodo">Aggiungi</button>
             </div>
 
             <div class="todo">

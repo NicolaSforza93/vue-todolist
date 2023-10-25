@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newTodo: '',
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -22,9 +23,14 @@ createApp({
         }
     },
     methods: {
+        addTodo() {
+            this.todos.unshift({text: this.newTodo});
+            this.newTodo = ''
+        },
+
         removeTodo(index) {
             console.log('cancella');
-            this.todos.splice(index, 1)
+            this.todos.splice(index, 1);
         }
     },
     mounted() {
