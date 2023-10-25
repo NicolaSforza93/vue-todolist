@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container {
     max-width: 700px;
     margin: 0 auto;
@@ -5,4 +10,10 @@
 
 .done {
     text-decoration: line-through;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
 }

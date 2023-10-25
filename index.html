@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/40396ce4f1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Vue To Do List</title>
 </head>
+
 <body>
     <div id="app">
         <div class="container">
@@ -13,19 +16,24 @@
                 <input type="text">
                 <button>Aggiungi</button>
             </div>
-           
-            <div class="tasks">
+
+            <div class="todo">
                 <ul>
-                    <li v-for="(item, index, key) in todos" :class="{done: item.done}">{{ item.text }}</li>
+                    <li v-for="(item, index, key) in todos" :class="{done: item.done}">{{ item.text }}
+                        <span @click="removeTodo(index)">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                    </li>
                 </ul>
                 <p>Non ci sono tasks</p>
             </div>
         </div>
-    </div>    
+    </div>
 
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>

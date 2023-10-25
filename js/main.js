@@ -21,6 +21,12 @@ createApp({
             ]            
         }
     },
+    methods: {
+        removeTodo(index) {
+            console.log('cancella');
+            this.todos.splice(index, 1)
+        }
+    },
     mounted() {
         console.log('OK');
     }
