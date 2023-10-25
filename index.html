@@ -13,7 +13,7 @@
     <div id="app">
         <div class="container">
             <div>
-                <input type="text" v-model="newTodo">
+                <input type="text" v-model="newTodo" @keyup.enter="addTodo()">
                 <button @click="addTodo">Aggiungi</button>
             </div>
 
