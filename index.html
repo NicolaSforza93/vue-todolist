@@ -19,7 +19,7 @@
 
             <div class="todo">
                 <ul v-if="todos.length > 0">
-                    <li v-for="(item, index) in todos" :key="index" :class="{done: item.done}" @click="">{{ item.text }}
+                    <li v-for="(item, index) in todos" :key="index" :class="{done: item.done}" @click="item.done = true">{{ item.text }}
                         <span @click.stop="removeTodo(index)">
                             <i class="fa-solid fa-xmark"></i>
                         </span>
