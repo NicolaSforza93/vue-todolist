@@ -24,13 +24,21 @@ createApp({
     },
     methods: {
         addTodo() {
-            this.todos.unshift({ text: this.newTodo, done: false });
+            this.todos.unshift({ text: this.newTodo.charAt(0).toUpperCase() + this.newTodo.slice(1), done: false });
             this.newTodo = ''
         },
 
         removeTodo(index) {
-            console.log('cancella');
+            // console.log('cancella');
             this.todos.splice(index, 1);
+        },
+
+        toggleTask(index) {
+            if(this.todos[index].done === true) {
+                this.todos[index].done = false
+            } else {
+                this.todos[index].done = true
+            }
         }
     },
     mounted() {
