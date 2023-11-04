@@ -1,11 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .container {
     max-width: 700px;
-    margin: 0 auto;
 }
 
 .done {
@@ -13,7 +7,10 @@
 }
 
 li {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+    cursor: pointer;
+}
+
+.delete i {
+    color: red;
+    cursor: pointer;
 }
